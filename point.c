@@ -9,8 +9,7 @@ unsigned int distance_of_points(Point point1, Point point2) {
 
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location)
 {
-  Point location = current_location;
-  unsigned int distance = 100000;
+  unsigned int distance = MAX_DISTANCE;
   for(int i = 0; i < points_length; i++) {
     unsigned int temp_distance = distance_of_points(current_location, food_points[i]);
     if(distance > temp_distance) {
