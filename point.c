@@ -11,7 +11,7 @@ void get_closest_food(Point food_points[], int points_length, Point current_loca
 {
   double distance = MAX_DISTANCE;
   for(int i = 0; i < points_length; i++) {
-    unsigned int distance_to_current_food = distance_of_points(current_location, food_points[i]);
+    double distance_to_current_food = distance_of_points(current_location, food_points[i]);
     if(distance > distance_to_current_food) {
       distance = distance_to_current_food;
       closest_food_location->x = food_points[i].x;
