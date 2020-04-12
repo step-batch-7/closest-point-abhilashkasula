@@ -1,7 +1,7 @@
 #include <math.h>
 #include "point.h"
 
-unsigned int distance_of_points(Point point1, Point point2) {
+double distance_of_points(Point point1, Point point2) {
   int x = pow(point1.x - point2.x, 2);
   int y = pow(point1.y - point2.y, 2);
   return sqrt(x + y);
@@ -9,7 +9,7 @@ unsigned int distance_of_points(Point point1, Point point2) {
 
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location)
 {
-  unsigned int distance = MAX_DISTANCE;
+  double distance = MAX_DISTANCE;
   for(int i = 0; i < points_length; i++) {
     unsigned int distance_to_current_food = distance_of_points(current_location, food_points[i]);
     if(distance > distance_to_current_food) {

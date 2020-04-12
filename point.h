@@ -21,6 +21,6 @@ typedef struct
 #define FOOD_POINTS {{18, 76}, {19, 66}, {89, 57}, {9, 71}, {55, 38}}
 #define ORGANISM_LOCATIONS {{18, 86}, {97, 27}, {69, 7}, {10, 94}, {36, 27}}
 #define LENGTH 5
-#define MAX_DISTANCE 100000
+#define MAX_DISTANCE 1000000.00
 
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location);
