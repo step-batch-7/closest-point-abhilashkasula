@@ -23,3 +23,4 @@ typedef struct
 #define LENGTH 5
 
 void get_closest_food(Point food_points[], int points_length, Point current_location, Point *closest_food_location);
+double distance_of_points(Point point1, Point point2);
